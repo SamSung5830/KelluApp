@@ -33,12 +33,11 @@
                   // var idp = 1234;
              if (respuesta == "1")
               {
-                alert( "Usuario validado. En un momento lo atenderemos");
+                alert("Usuario validado. En un momento lo atenderemos");
                 // var xhr2 = new XMLHttpRequest();
                 // xhr2.open('PATCH', "http://kellu-cuentas-login.mybluemix.net/device/"+rutuser+"/"+idp, false);
                 // xhr2.send();
                 // alert(xhr2.responseText);
-
                 rut.value = "";
                 pwd.value = "";
                 window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=no');
@@ -73,7 +72,7 @@
             <!-- <form  action="https://kellu-cuentas-login.mybluemix.net/login/" method="post"> -->
             <form  action="javascript:validaUser()" method="post">
                Rut
-               <br><input type="text" maxlength="15" id="rut" name="rut" value="14259753" required>
+               <br><input type="text" maxlength="15" id="rut" name="rut" value="14.259.753-5" required>
                <br><br>Contraseña de red Sura
                <br><input type="password" maxlength="20" id="pwd" name="pwd" value="Eureka" required>
                <br><br><input type="submit" value="Enviar">
