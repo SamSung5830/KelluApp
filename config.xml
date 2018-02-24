@@ -13,7 +13,7 @@
     <icon src="www/img/kelluicon.png" />
 
     <!--para poder usar inAppBrowser en phonegap build-->
-    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
+    <!-- <gap:plugin name="org.apache.cordova.core.inappbrowser" /> -->
 
     <!--ejecutar en un Iframe-->
     <plugin name="cordova-plugin-whitelist" />
