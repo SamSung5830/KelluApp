@@ -33,7 +33,7 @@
                   // var idp = 1234;
              if (respuesta == "1")
               {
-                alert("Usuario validado. En un momento lo atenderemos");
+                alert("Usuario validado.\nEn un momento lo atenderemos");
                 // var xhr2 = new XMLHttpRequest();
                 // xhr2.open('PATCH', "http://kellu-cuentas-login.mybluemix.net/device/"+rutuser+"/"+idp, false);
                 // xhr2.send();
@@ -59,26 +59,25 @@
       </script>
 
       <center>
-      <font color="orange">
-        <br><img src="img\Sura.gif" width="120" height="120"> <!--logo SURA--></br>
-        <h1>Sistema K<font color="white">ellu</font> </h1>
-        <b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b>
-        <p>
-            <li>Debloqueo de cuenta</br></li>
-            <li>Conocer estado de tickets</br></br></li>
-            Por favor ingrese su <font color="white">Rut y Contraseña Sura</font>
-        </p>
-            <!-- envía por método "post"-->
-            <!-- <form  action="https://kellu-cuentas-login.mybluemix.net/login/" method="post"> -->
-            <form  action="javascript:validaUser()" method="post">
-               Rut
-               <br><input type="text" maxlength="15" size="8" id="rut" name="rut" value="14.259.753-5" required>
-               <br><br>Contraseña
-               <br><input type="password" maxlength="20" size="8" id="pwd" name="pwd" value="Eureka" required>
-               <br><br><input type="submit" value="Entrar">
-            </form>
-
-        </font>
+        <font color="orange">
+          <br><img src="img\Sura.gif" width="120" height="120"> <!--logo SURA--></br>
+          <h1>Sistema K<font color="white">ellu</font> </h1>
+          <b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b>
+          <p>
+              <li>Debloqueo de cuenta</br></li>
+              <li>Conocer estado de tickets</br></br></li>
+              Por favor ingrese su <font color="white">Rut y Contraseña Sura</font>
+          </p>
+              <!-- envía por método "post"-->
+              <!-- <form  action="https://kellu-cuentas-login.mybluemix.net/login/" method="post"> -->
+              <form  action="javascript:validaUser()" method="post">
+                 Rut
+                 <br><input type="text" maxlength="15" size="8" id="rut" name="rut" value="14.259.753-5" required>
+                 <br><br>Contraseña
+                 <br><input type="password" maxlength="20" size="8" id="pwd" name="pwd" value="Eureka" required>
+                 <br><br><input type="submit" value="Entrar">
+              </form>
+          </font>
         </center>
         <script type="text/javascript" src="cordova.js"></script>
     </body>

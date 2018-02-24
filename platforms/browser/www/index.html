@@ -10,16 +10,10 @@
 
       <script type="text/javascript">
 
-          var idp = 12; //variable global
-
-
+          var idp = 12; //variable global asigna valor virtual de ID del teléfono
           function CargaInicial()
           {
-            alert("bienvenido Idphone" + idp);
-            // 
-            // var devicePlatform = device.platform;
-            // var Idtelefono = device.uuid;
-            // alert(devicePlatform + Idtelefono );
+            alert("bienvenido Idphone" + idp); // comprueba ID virtual del teléfono
             var xhr = new XMLHttpRequest();
             xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
             xhr.send();
@@ -35,21 +29,17 @@
                   alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
                   window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
                  };
-
           }
-
 
       </script>
 
       <center>
         <font color="orange">
-
           <br><img src="img\Sura.gif" width="120" height="120"> <!--logo SURA--></br>
-
           <h1>Sistema K<font color="white">ellu</font> </h1>
           <p>
-            <br><b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b></br>
-            <br> En un momento lo atenderemos...</br>
+            <b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b>
+            En un momento lo atenderemos...
           </p>
         </font>
       </center>
