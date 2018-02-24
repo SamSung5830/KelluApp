@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Sistema Kellu</title>
+    </head>
+
+    <body onload="CargaInicial()" bgcolor="#2a1d15" style="font-family:verdana;">
+
+      <script type="text/javascript">
+
+          var idp = 12; //variable global
+
+
+          function CargaInicial()
+          {
+            alert("bienvenido Idphone" + idp);
+            // 
+            // var devicePlatform = device.platform;
+            // var Idtelefono = device.uuid;
+            // alert(devicePlatform + Idtelefono );
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
+            xhr.send();
+            var respuesta = xhr.responseText;
+            alert(respuesta);
+              if (respuesta == "1")
+                {
+                  alert( "ID device encontrado");
+                  window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+                };
+              if (respuesta == "2")
+                 {
+                  alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
+                  window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+                 };
+
+          }
+
+
+      </script>
+
+      <center>
+        <font color="orange">
+
+          <br><img src="img\Sura.gif" width="120" height="120"> <!--logo SURA--></br>
+
+          <h1>Sistema K<font color="white">ellu</font> </h1>
+          <p>
+            <br><b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b></br>
+            <br> En un momento lo atenderemos...</br>
+          </p>
+        </font>
+      </center>
+      <script type="text/javascript" src="cordova.js"></script>
+    </body>
+</html>
