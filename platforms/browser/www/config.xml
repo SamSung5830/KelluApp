@@ -7,9 +7,8 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
-    <content src="index2.html" />
+    <content src="index1.html" />
     <access origin="https://kellu-chatweb.mybluemix.net/" />
     <icon src="www/img/kelluicon.png" />
-    <gap:plugin name="org.apache.cordova.core.inappbrowser" />
     <gap:plugin name="cordova-plugin-uniquedeviceid" source="npm" />
 </widget>
