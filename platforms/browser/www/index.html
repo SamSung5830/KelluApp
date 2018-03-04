@@ -21,14 +21,15 @@
 
           //API device cargada
           var element = document.getElementById('deviceProperties');
-          element.innerHTML = device.uuid+device.serial+device.version;
+                        element.innerHTML = device.version;
+
+          // element.innerHTML = device.uuid+device.serial+device.version;
          // 'Device UUID: '     + device.uuid     + '<br />' +
          // 'Device serial: '  + device.serial  + '<br />'+
          // 'Device Version: '  + device.version  + '<br />';
 
-          alert("versión"+device.version);
-
-          var idp = device.version; //CAMBIAR POR DEVICE.UUID ANTES DE COMPILACIÓN FINAL
+          var idp = device.version;
+          alert("versión"+idp);
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
           xhr.send();
@@ -55,7 +56,7 @@
           <h1>Sistema K<font color="white">ellu</font> </h1>
           <p>
             <b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b>
-            En un momento lo atenderemos...
+            En un momento lo atenderemos....
           </p>
         </font>
       </center>
