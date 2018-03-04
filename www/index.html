@@ -4,37 +4,56 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Sistema Kellu</title>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script type="text/javascript" charset="utf-8"></script>
+
     </head>
 
-    <body onload="CargaInicial()" bgcolor="#2a1d15" style="font-family:verdana;">
+    <body onload="cargaInicial()" bgcolor="#2a1d15" style="font-family:verdana;">
+
+      <div id="deviceProperties">PROPIEDADES</div>
 
       <script type="text/javascript">
+          //carga de librerías de la API device
+        document.addEventListener("deviceready", cargaInicial, false);
 
-          var idp = 12; //variable global asigna valor virtual de ID del teléfono
-          function CargaInicial()
-          {
-            alert("bienvenido Idphone" + idp); // comprueba ID virtual del teléfono
-            var xhr = new XMLHttpRequest();
-            xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
-            xhr.send();
-            var respuesta = xhr.responseText;
-            alert(respuesta);
-              if (respuesta == "1")
-                {
-                  alert( "ID device encontrado");
-                  window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
-                };
-              if (respuesta == "2")
-                 {
-                  alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
-                  window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
-                 };
-          }
+        function cargaInicial() {
+
+          //API device cargada
+          var element = document.getElementById('deviceProperties');
+                        element.innerHTML = device.uuid;
+
+          // element.innerHTML = device.uuid+device.serial+device.version;
+         // 'Device UUID: '     + device.uuid     + '<br />' +
+         // 'Device serial: '  + device.serial  + '<br />'+
+         // 'Device Version: '  + device.version  + '<br />';
+
+          alert("versión"+device.uuid);
+          var idp = device.uuid;
+          
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
+          xhr.send();
+
+          alert(xhr.responseText);
+          var respuesta = xhr.responseText;
+            if (respuesta == "1")
+              {
+                alert( "ID device encontrado");
+                window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+              };
+            if (respuesta == "2")
+              {
+                alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
+                localStorage.setItem("num_id",idp);
+                window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+              };
+        };
       </script>
 
       <center>
         <font color="orange">
-          <br><img src="img\Sura.gif" width="120" height="120"> <!--logo SURA--></br>
+          <br><img src="img\Sura.gif" width="100" height="100"> <!--logo SURA--></br>
           <h1>Sistema K<font color="white">ellu</font> </h1>
           <p>
             <b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b>

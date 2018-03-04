@@ -20,6 +20,5 @@
     <content src="index.html" />
     <access origin="https://kellu-chatweb.mybluemix.net/" />
     <icon src="www/img/kelluicon.png" />
-    <gap:plugin name="cordova-plugin-uniquedeviceid" source="npm" />
     <preference name="loglevel" value="DEBUG" />
 </widget>
