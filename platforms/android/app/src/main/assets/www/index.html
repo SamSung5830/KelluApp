@@ -39,13 +39,14 @@
             if (respuesta == "1")
               {
                 alert( "ID device encontrado");
-                window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+                var abreventana = window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+
               };
             if (respuesta == "2")
               {
                 alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
                 localStorage.setItem("num_id",idp);
-                window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+                var abreventana = window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
               };
         };
       </script>
