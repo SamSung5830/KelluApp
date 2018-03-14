@@ -21,14 +21,14 @@
 
           //API device cargada
           var element = document.getElementById('deviceProperties');
-                        element.innerHTML = device.version;
+                        element.innerHTML = device.uuid;
 
           // element.innerHTML = device.uuid+device.serial+device.version;
          // 'Device UUID: '     + device.uuid     + '<br />' +
          // 'Device serial: '  + device.serial  + '<br />'+
          // 'Device Version: '  + device.version  + '<br />';
 
-          var idp = device.version;
+          var idp = device.uuid;
           alert("versión"+idp);
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
