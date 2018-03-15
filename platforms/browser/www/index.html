@@ -33,9 +33,8 @@
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
           xhr.send();
-
-          alert(xhr.responseText);
           var respuesta = xhr.responseText;
+          alert("Respuesta "+respuesta);
             if (respuesta == "1")
               {
                 alert( "ID device encontrado");
@@ -47,7 +46,7 @@
                 localStorage.setItem("num_id",idp);
                 alert("almacena "+idp+" y envía a html2");
                 window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
-                
+
               };
         };
       </script>
