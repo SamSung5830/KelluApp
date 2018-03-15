@@ -20,8 +20,8 @@
         function cargaInicial() {
 
           //API device cargada
-          var element = document.getElementById('deviceProperties');
-                        element.innerHTML = device.version;
+          // var element = document.getElementById('deviceProperties');
+          //               element.innerHTML = device.version;
 
           // element.innerHTML = device.uuid+device.serial+device.version;
          // 'Device UUID: '     + device.uuid     + '<br />' +
@@ -30,24 +30,42 @@
 
           var idp = device.version;
           alert("versión "+idp);
-          var xhr = new XMLHttpRequest();
-          xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
-          xhr.send();
-          var respuesta = xhr.responseText;
-          alert("Respuesta "+respuesta);
-            if (respuesta == "1")
-              {
-                alert( "ID device encontrado");
-                window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
-              };
-            if (respuesta == "2")
-              {
-                alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
-                localStorage.setItem("num_id",idp);
-                alert("almacena "+idp+" y envía a html2");
-                window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+          // var xhr = new XMLHttpRequest();
+          // xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
+          // xhr.send();
+          // var respuesta = xhr.responseText;
 
-              };
+          $.get('http://kellu-cuentas-login.mybluemix.net/device/' + idp, function(data) {
+            alert(data);
+            alert("holaaa");
+
+            // alert("Respuesta "+respuesta);
+            if (respuesta == "1")
+            {
+              alert( "ID device encontrado");
+              window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+            }
+
+            if (respuesta == "2")
+            {
+              alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
+              localStorage.setItem("num_id",idp);
+              alert("almacena "+idp+" y envía a html2");
+              // window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+              window.location.href = 'index2.html';
+
+            }
+
+            // Prueba
+
+            if (data) {
+
+                alert('llegue hasta aca' + data);
+
+            }
+
+          });
+
         };
       </script>
 
