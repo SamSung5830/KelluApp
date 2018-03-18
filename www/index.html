@@ -9,9 +9,7 @@
 
     </head>
 
-    <body onload="cargaInicial()" bgcolor="#2a1d15" style="font-family:verdana;">
-
-      <div id="deviceProperties">PROPIEDADES</div>
+    <body bgcolor="#2a1d15" style="font-family:verdana;">
 
       <script type="text/javascript">
           //carga de librerías de la API device
@@ -30,43 +28,26 @@
 
           var idp = device.version;
           alert("versión "+idp);
-          // var xhr = new XMLHttpRequest();
-          // xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
-          // xhr.send();
-          // var respuesta = xhr.responseText;
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
+          xhr.send();
+          var respuesta = xhr.responseText;
 
-          $.get('http://kellu-cuentas-login.mybluemix.net/device/' + idp, function(data) {
-            alert(data);
-            alert("holaaa");
-
-            // alert("Respuesta "+respuesta);
+            alert("Respuesta "+respuesta);
             if (respuesta == "1")
             {
               alert( "ID device encontrado");
               window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
-            }
-
+            };
             if (respuesta == "2")
             {
               alert("Id de teléfono no registrado.\nPor favor ingrese sus datos para \nregistrar su nuevo teléfono");
               localStorage.setItem("num_id",idp);
               alert("almacena "+idp+" y envía a html2");
-              // window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
-              window.location.href = 'index2.html';
+              window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+            };
+        }
 
-            }
-
-            // Prueba
-
-            if (data) {
-
-                alert('llegue hasta aca' + data);
-
-            }
-
-          });
-
-        };
       </script>
 
       <center>
@@ -75,7 +56,7 @@
           <h1>Sistema K<font color="white">ellu</font> </h1>
           <p>
             <b style="font-size:90%;"><h3>Asistente de Mesa de Ayuda IT</h3></b>
-            En un momento lo atenderemos....
+            En un momento lo atenderemos...
           </p>
         </font>
       </center>
