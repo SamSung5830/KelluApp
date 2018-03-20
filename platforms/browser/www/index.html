@@ -7,10 +7,12 @@
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8"></script>
 
+
+
+
     </head>
 
     <body bgcolor="#2a1d15" style="font-family:verdana;">
-
       <script type="text/javascript">
           //carga de librerías de la API device
         document.addEventListener("deviceready", cargaInicial, false);
@@ -29,7 +31,7 @@
           var idp = device.version;
           alert("versión "+idp);
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
+          xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, true);
           xhr.send();
           var respuesta = xhr.responseText;
 
