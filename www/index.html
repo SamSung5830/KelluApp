@@ -31,11 +31,11 @@
           var idp = device.version;
           alert("versión "+idp);
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, true);
+          xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, false);
           xhr.send();
           var respuesta = xhr.responseText;
 
-            alert("Respuesta "+respuesta);
+            alert("Respuesta>"+respuesta+"<");
             if (respuesta == "1")
             {
               alert( "ID device encontrado");
