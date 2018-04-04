@@ -32,6 +32,7 @@
           alert("versión "+idp);
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, true);
+          
           xhr.send(null);
           var respuesta = xhr.responseText;
 
