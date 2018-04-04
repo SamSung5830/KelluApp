@@ -6,36 +6,33 @@
         <title>Sistema Kellu</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8"></script>
-
-
-
-
     </head>
 
     <body bgcolor="#2a1d15" style="font-family:verdana;">
+
       <script type="text/javascript">
           //carga de librerías de la API device
         document.addEventListener("deviceready", cargaInicial, false);
 
         function cargaInicial() {
 
-          //API device cargada
-          // var element = document.getElementById('deviceProperties');
-          //               element.innerHTML = device.version;
+                    //API device cargada
+                    // var element = document.getElementById('deviceProperties');
+                    //               element.innerHTML = device.version;
 
-          // element.innerHTML = device.uuid+device.serial+device.version;
-         // 'Device UUID: '     + device.uuid     + '<br />' +
-         // 'Device serial: '  + device.serial  + '<br />'+
-         // 'Device Version: '  + device.version  + '<br />';
+                    // element.innerHTML = device.uuid+device.serial+device.version;
+                   // 'Device UUID: '     + device.uuid     + '<br />' +
+                   // 'Device serial: '  + device.serial  + '<br />'+
+                   // 'Device Version: '  + device.version  + '<br />';
 
           var idp = device.version;
-          alert("versión "+idp);
+          alert("ID "+idp);
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-login.mybluemix.net/device/"+idp, true);
           xhr.send();
           var respuesta = xhr.responseText;
+          alert("Respuesta "+respuesta);
 
-            alert("Respuesta "+respuesta);
             if (respuesta == "1")
             {
               alert( "ID device encontrado");

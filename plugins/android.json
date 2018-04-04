@@ -15,7 +15,14 @@
     },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.phonegap.helloworld"
+    },
+    "cordova-plugin-http": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.phonegap.helloworld"
+    }
+  }
 }
