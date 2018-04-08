@@ -18,7 +18,8 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
-    <access origin="https://kellu-chatweb.mybluemix.net/" />
+    <access origin="http://kellu-chatweb.mybluemix.net/" />
+    <access origin="http://kellu*.*" />
     <icon src="www/img/kelluicon.png" />
     <preference name="loglevel" value="DEBUG" />
 </widget>

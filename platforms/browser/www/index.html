@@ -28,14 +28,15 @@
          // 'Device serial: '  + device.serial  + '<br />'+
          // 'Device Version: '  + device.version  + '<br />';
 
-          var idp = device.version;
           var url = "http://kellu-cuentas-device.mybluemix.net/device/";
+          var idp = device.version;
           alert(url);
           alert("versión "+idp);
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', url + idp+".JSON", true);
-          alert(url+idp+".JSON")
+          xhr.open('GET', url + idp, true);
+          alert(url+idp);
           xhr.send();
+
           var respuesta = xhr.responseText;
           respuesta = 1;
             alert("Respuesta "+respuesta);
