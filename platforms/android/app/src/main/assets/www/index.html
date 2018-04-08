@@ -29,9 +29,12 @@
          // 'Device Version: '  + device.version  + '<br />';
 
           var idp = device.version;
+          var url = "http://kellu-cuentas-device.mybluemix.net/device/";
+          alert(url);
           alert("versión "+idp);
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', 'http://kellu-cuentas-device.mybluemix.net/device/'+idp, true);
+          xhr.open('GET', url + idp+".JSON", true);
+          alert(url+idp+".JSON")
           xhr.send();
           var respuesta = xhr.responseText;
 
@@ -39,7 +42,7 @@
             if (respuesta == "1")
             {
               alert( "ID device encontrado");
-              window.open('https://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
+              window.open('http://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
             };
             if (respuesta == "2")
             {
