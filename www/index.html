@@ -31,10 +31,9 @@
           var idp = device.version;
           alert("versión "+idp);
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', "http://kellu-cuentas-device.mybluemix.net/device/"+idp, true);
+          xhr.open('GET', 'http://kellu-cuentas-device.mybluemix.net/device/'+idp, true);
           xhr.send();
-          // var respuesta = xhr.responseText;
-          var respuesta = 1;
+          var respuesta = xhr.responseText;
 
             alert("Respuesta "+respuesta);
             if (respuesta == "1")
