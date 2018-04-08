@@ -40,7 +40,7 @@
                 var json = JSON.stringify(data);
 
                 var xhr2 = new XMLHttpRequest();
-                xhr2.open('PATCH', "http://kellu-cuentas-login.mybluemix.net/device/", false);
+                xhr2.open('PATCH', "http://kellu-cuentas-device.mybluemix.net/device/", false);
                 xhr2.setRequestHeader('Content-type','application/json; charset=utf-8');
                 alert(json + "<---CONTENIDO DE JSON");
                 xhr2.send(json);
