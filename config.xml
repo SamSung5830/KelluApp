@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="http://kellu-chatweb.mybluemix.net/" />
-    <access origin="http://kellu*.*" />
+    <access origin="*" />
     <icon src="www/img/kelluicon.png" />
     <plugin name="cordova-plugin-whitelist" />
     <plugin name="cordova-plugin-device" spec="~2.0.1" />

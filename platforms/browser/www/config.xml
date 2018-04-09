@@ -9,6 +9,6 @@
     </author>
     <content src="index.html" />
     <access origin="http://kellu-chatweb.mybluemix.net/" />
-    <access origin="http://kellu*.*" />
+    <access origin="*" />
     <icon src="www/img/kelluicon.png" />
 </widget>

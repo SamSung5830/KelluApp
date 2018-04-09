@@ -3,43 +3,29 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
         <title>Sistema Kellu</title>
         <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
         <script type="text/javascript" charset="utf-8"></script>
-
-
-
 
     </head>
 
     <body bgcolor="#2a1d15" style="font-family:verdana;">
       <script type="text/javascript">
-          //carga de librerías de la API device
+      //carga de librerías de la API device
         document.addEventListener("deviceready", cargaInicial, false);
 
         function cargaInicial() {
 
-          //API device cargada
-          // var element = document.getElementById('deviceProperties');
-          //               element.innerHTML = device.version;
-
-          // element.innerHTML = device.uuid+device.serial+device.version;
-         // 'Device UUID: '     + device.uuid     + '<br />' +
-         // 'Device serial: '  + device.serial  + '<br />'+
-         // 'Device Version: '  + device.version  + '<br />';
-
-          var url = "http://kellu-cuentas-device.mybluemix.net/device/";
           var idp = device.version;
-          alert(url);
-          alert("versión "+idp);
+          alert("versión NN "+idp);
+
           var xhr = new XMLHttpRequest();
-          xhr.open('GET', url + idp, true);
-          alert(url+idp);
+          xhr.open('GET', "http://kellu-cuentas-device.mybluemix.net/device/"+idp, false);
           xhr.send();
 
           var respuesta = xhr.responseText;
-          respuesta = 1;
-            alert("Respuesta "+respuesta);
+            alert("Respuesta"+respuesta);
             if (respuesta == "1")
             {
               alert( "ID device encontrado");
