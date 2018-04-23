@@ -42,11 +42,11 @@
                 var xhr2 = new XMLHttpRequest();
                 xhr2.open('PATCH', "http://kellu-cuentas-device.mybluemix.net/device/", false);
                 xhr2.setRequestHeader('Content-type','application/json; charset=utf-8');
-                alert(json + "<---CONTENIDO DE JSON");
+                // alert(json + "<---CONTENIDO DE JSON");
                 xhr2.send(json);
-                alert(xhr2.responseText);
+                // alert(xhr2.responseText);
 
-                alert("Usuario validado.\nEn un momento lo atenderemos");
+                alert("Usuario validado. En un  \nmomento lo \natenderemos");
                 rut.value = "";
                 pwd.value = "";
                 window.open('http://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=no');
