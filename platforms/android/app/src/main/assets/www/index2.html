@@ -12,6 +12,12 @@
 
           function validaUser()
           {
+            if (rut.value = ""  || pwd.value = "")
+            {
+              alert("Debe ingresar su rut y Contraseña");
+              break;
+            }
+
              var rut2 = rut.value;
              rut2 = rut2.replace(/\./g,'');
              if (rut2.toString().length > 8)
@@ -42,24 +48,21 @@
                 var xhr2 = new XMLHttpRequest();
                 xhr2.open('PATCH', "http://kellu-cuentas-device.mybluemix.net/device/", false);
                 xhr2.setRequestHeader('Content-type','application/json; charset=utf-8');
-                // alert(json + "<---CONTENIDO DE JSON");
                 xhr2.send(json);
-                // alert(xhr2.responseText);
-
-                alert("Usuario validado. \nEn un momento lo atenderemos");
+                alert("Usuario validado. En un momento lo atenderemos");
                 rut.value = "";
                 pwd.value = "";
                 window.open('http://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=no');
               };
              if (respuesta == "2")
               {
-                alert("Contraseña incorrecta.\nPor favor ingrese sus datos nuevamente");
+                alert("Contraseña incorrecta. Por favor ingrese sus datos nuevamente");
                 rut.value = "";
                 pwd.value = "";
               };
              if (respuesta == "3")
               {
-                alert("Rut no encontrado.\nPor favor ingrese sus datos nuevamente");
+                alert("Rut no encontrado. Por favor ingrese sus datos nuevamente");
                 rut.value = "";
                 pwd.value = "";
               };
@@ -81,9 +84,9 @@
               <!-- envía por método "post"-->
             <form  action="javascript:validaUser()" method="post">
              Rut
-             <br><input type="text" maxlength="20" size="8" id="rut" name="rut" value="" required>
+             <br><input type="text" maxlength="12" size="14" id="rut" name="rut" value="" required>
              <br><br>Contraseña
-             <br><input type="password" maxlength="20" size="8" id="pwd" name="pwd" value="" required>
+             <br><input type="password" maxlength="20" size="14" id="pwd" name="pwd" value="" required>
              <br><br><input type="submit" value="Entrar">
           </form>
         </font>

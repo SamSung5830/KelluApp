@@ -18,29 +18,25 @@
         function cargaInicial() {
 
           var idp = device.uuid;
-          //alert("versión UUID "+idp);
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-device.mybluemix.net/device/"+idp, false);
           xhr.send();
 
           var respuesta = xhr.responseText;
-          //  alert("Respuesta"+respuesta);
             if (respuesta == "1")
             {
-              // alert( "ID device encontrado");
               window.open('http://kellu-chatweb.mybluemix.net/', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
             };
             if (respuesta == "2")
             {
               alert("Id de teléfono no registrado. Por favor ingrese sus datos para registrar su nuevo teléfono");
               localStorage.setItem("num_id",idp);
-              // alert("almacena "+idp+" y envía a html2");
               window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
             };
         }
 
       </script>
-      
+
       <center>
         <font color="orange">
           <br><img src="img\Sura.gif" width="85" height="85"> <!--logo SURA--></br>
