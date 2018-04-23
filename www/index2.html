@@ -12,12 +12,6 @@
 
           function validaUser()
           {
-            if (rut.value = ""  || pwd.value = "")
-            {
-              alert("Debe ingresar su rut y Contraseña");
-              break;
-            }
-
              var rut2 = rut.value;
              rut2 = rut2.replace(/\./g,'');
              if (rut2.toString().length > 8)
@@ -84,9 +78,9 @@
               <!-- envía por método "post"-->
             <form  action="javascript:validaUser()" method="post">
              Rut
-             <br><input type="text" maxlength="12" size="14" id="rut" name="rut" value="" required>
+             <br><input type="text" maxlength="12" size="14" id="rut" name="rut" required value="">
              <br><br>Contraseña
-             <br><input type="password" maxlength="20" size="14" id="pwd" name="pwd" value="" required>
+             <br><input type="password" maxlength="20" size="14" id="pwd" name="pwd" required="true" value="" >
              <br><br><input type="submit" value="Entrar">
           </form>
         </font>
