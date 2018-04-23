@@ -1,10 +1,10 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Aplicación Kellu",
-  "short_name": "Aplicación Kellu",
+  "name": "Aplicacion Kellu",
+  "short_name": "Aplicacion Kellu",
   "version": "com.phonegap.helloworld",
-  "description": "Aplicación Kellu para consulta de ticket y desbloqueo de cuentas",
+  "description": "Aplicacion Kellu para consulta de ticket y desbloqueo de cuentas",
   "author": "PhoneGap Team",
   "icons": [
     {

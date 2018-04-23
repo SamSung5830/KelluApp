@@ -1,7 +1,7 @@
 {
   "name": "com.phonegap.helloworld",
   "version": "1.0.0",
-  "displayName": "Aplicación Kellu",
+  "displayName": "Aplicacion Kellu",
   "cordova": {
     "platforms": [
       "android",
@@ -10,7 +10,8 @@
     "plugins": {
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-responsive-webview": {}
     }
   },
   "dependencies": {
