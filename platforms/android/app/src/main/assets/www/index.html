@@ -17,7 +17,7 @@
 
         function cargaInicial() {
 
-          var idp = device.uuid;
+          var idp = device.version;
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-device.mybluemix.net/device/"+idp, false);
           xhr.send();

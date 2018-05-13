@@ -17,7 +17,7 @@
 
         function cargaInicial() {
 
-          var idp = device.uuid;
+          var idp = device.uuidg;
           var xhr = new XMLHttpRequest();
           xhr.open('GET', "http://kellu-cuentas-device.mybluemix.net/device/"+idp, false);
           xhr.send();
@@ -29,7 +29,6 @@
             };
             if (respuesta == "2")
             {
-              alert("Id de teléfono no registrado. Por favor ingrese sus datos para registrar su nuevo teléfono");
               localStorage.setItem("num_id",idp);
               window.open('index2.html', '_self', 'transitionstyle=fliphorizontal', 'location=yes');
             };
